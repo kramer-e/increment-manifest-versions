@@ -13,6 +13,10 @@ inputs:
     description: 'The release type "major", "minor" or "patch"'
     required: true
 
-outputs:
+runs:
   using: 'node16'
   main: 'dist/index.js'
+
+branding:
+  icon: 'arrow-up-circle'
+  color: 'green'
