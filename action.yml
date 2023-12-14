@@ -1,0 +1,18 @@
+name: 'Replace string Action'
+description: 'Find and replace a certain string in a text file'
+author: 'kramer-e'
+
+inputs:
+  android_manifest_paths:
+    description: 'The android manifest paths, separated by a ","'
+    required: true
+  ios_plist_paths:
+    description: 'The ios plist paths, separated by a ","'
+    required: true
+  release_type:
+    description: 'The release type "major", "minor" or "patch"'
+    required: true
+
+outputs:
+  using: 'node16'
+  main: 'dist/index.js'

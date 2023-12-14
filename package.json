@@ -1,0 +1,26 @@
+{
+  "name": "replace-action",
+  "version": "1.0.0",
+  "description": "test github action in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/action.js -o dist --source-map"
+  },
+  "keywords": [
+    "github",
+    "test",
+    "javascript",
+    "action",
+    "replace"
+  ],
+  "author": "kramer-e",
+  "license": "MIT",
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "semver": "^7.5.4"
+  }
+}
