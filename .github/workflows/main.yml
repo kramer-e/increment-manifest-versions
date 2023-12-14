@@ -1,0 +1,16 @@
+name: Testing manifest version increment
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Incrementing versions
+        # use the action that's inside the same repository
+        uses: ./
+        with:
+          android_manifest_paths: './samples/AndroidManifest.xml'
+          ios_plist_paths: './samples/Info.plist'
+          release_type: 'patch'
