@@ -6,7 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
+    steps:       
+      - name: Checkout
+        uses: actions/checkout@v3.5.2
+        
       - name: Incrementing versions
         # use the action that's inside the same repository
         uses: ./
