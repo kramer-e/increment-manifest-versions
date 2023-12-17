@@ -14,10 +14,12 @@ inputs:
     required: true
   must_match_single_result:
     description: 'When searching path with wildcards ("/**/" or "*.xml") and set "true", requires each given path to have exactly one match.'
-    required: true
+    default: 'true'
+    required: false
   sync_all_versions:
-    description: 'Retrieves highest version number and semantic version set in all manifest files, increments the values and updates all manifests.
-    required: true
+    description: 'Retrieves highest version number and semantic version set in all manifest files, increments the values and updates all manifests.'
+    default: 'false'
+    required: false
 
 runs:
   using: 'node16'
