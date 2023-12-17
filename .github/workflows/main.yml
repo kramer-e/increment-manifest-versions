@@ -19,3 +19,14 @@ jobs:
           android_manifest_paths: './samples/AndroidManifest.xml'
           ios_plist_paths: './samples/Info.plist'
           release_type: 'patch'
+
+      - name: Incrementing versions
+        # use the action that's inside the same repository
+        uses: ./
+        with:
+          android_manifest_paths: './**/AndroidManifest.xml'
+          ios_plist_paths: './samples/Info.plist'
+          release_type: 'patch'
+          must_match_single_result: 'false'
+          sync_all_versions: 'true'
+          
