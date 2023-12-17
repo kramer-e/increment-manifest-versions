@@ -7,11 +7,11 @@ const setInput = (name, value) =>
     process.env[`INPUT_${name.replace(/ /g, '_').toUpperCase()}`] = value;
 
 // For local test only, comment this for production!
-setInput('android_manifest_paths', './**/*AndroidManifest.xml');
-setInput('ios_plist_paths', './samples/Info.plist');
-setInput('release_type', 'patch');
-setInput('must_match_single_result', 'false');
-setInput('sync_all_versions', 'true');
+// setInput('android_manifest_paths', './**/*AndroidManifest.xml');
+// setInput('ios_plist_paths', './samples/Info.plist');
+// setInput('release_type', 'patch');
+// setInput('must_match_single_result', 'false');
+// setInput('sync_all_versions', 'true');
 
 const androidConfigFilePathsInput = core.getInput('android_manifest_paths', { required: true });
 const iosConfigFilePathsInput = core.getInput('ios_plist_paths', { required: true });

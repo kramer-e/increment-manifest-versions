@@ -10,7 +10,13 @@ inputs:
     description: 'The ios plist paths, separated by a ","'
     required: true
   release_type:
-    description: 'The release type "major", "minor" or "patch"'
+    description: 'The release type "major", "minor" or "patch" to incedment (e.g. "patch": 0.0.1 -> 0.0.2)'
+    required: true
+  must_match_single_result:
+    description: 'When searching path with wildcards ("/**/" or "*.xml") and set "true", requires each given path to have exactly one match.'
+    required: true
+  sync_all_versions:
+    description: 'Retrieves highest version number and semantic version set in all manifest files, increments the values and updates all manifests.
     required: true
 
 runs:
